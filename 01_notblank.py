@@ -1,8 +1,8 @@
 # not blank function
-def not_blank(name)
+def not_blank(question):
     valid = False
     while not valid:
-        response = input(name)
+        response = input(question)
 
         while response != "":
             return response
@@ -10,13 +10,5 @@ def not_blank(name)
         else:
             print("This can't be blank please enter a name")
 
-def not_blank(age)
-    valid = False
-    while not valid:
-        response = input(age)
-
-        while response != "":
-            return response
-
-        else:
-            print("This can't be blank please enter Your age")
+# ***** Main routine ****
+name = not_blank("What is your name? ")
