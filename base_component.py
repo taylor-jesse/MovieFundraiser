@@ -10,10 +10,25 @@ def not_blank(question):
         else:
             print("This can't be blank please enter a name")
 
-
-
 # ***** Main routine ****
 name = not_blank("What is your name? ")
 age = not_blank("How old are you? ")
-print(age)
-print(name)
+
+
+
+#set up directories
+
+#ask the user if they have used the program before or show
+
+#loop into net ticket details
+    #Get name
+
+    #get age
+
+    #calculate ticket price
+
+    #loop to ask for snacks
+
+    #calculate snack price
+
+    #ask for payment method and apply surcharge for cards
