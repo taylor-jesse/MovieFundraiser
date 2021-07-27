@@ -1,14 +1,10 @@
-# not blank function
-def not_blank(question):
-    valid = False
-    while not valid:
-        response = input(question)
+#initilize loop so it runs at least once
 
-        while response != "":
-            return response
+name = ""
+count = 0
+max_tickets = 5
 
-        else:
-            print("This can't be blank please enter a name")
-
-# ***** Main routine ****
-name = not_blank("What is your name? ")
+while name != "xxx" and count <+ max_tickets:
+    #get details
+    name = input("what is your name?")
+    count += 1
