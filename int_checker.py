@@ -10,3 +10,8 @@ def int_check(question):
             response = int(input(question))
 
             if response <= 0:
+                print(error)
+
+
+
+age = int_check("Age: ", 12, 130)
