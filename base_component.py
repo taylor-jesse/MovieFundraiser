@@ -15,13 +15,13 @@ def not_blank(question):
 #Int checker
 name = ""
 count = 0
-max_tickets = 5
+max_tickets = 150
 while name != "xxx" and count < max_tickets:
     print("You have {} seats "
           "left".format(max_tickets - count))
 
     # Get details
-    name = input ("Name: ")
+    name = not_blank("Name: ")
     count += 1
     print ()
 
@@ -35,10 +35,16 @@ else:
 
 #loop into net ticket details
     #Get name
-name = not_blank("What is your name? ")
+#name = not_blank("Name: ")
     #get age
-age = not_blank("How old are you? ")
-
+age = int_check("Age: ")
+    #check that the age is valid
+    if age < 12:
+        print("Sorry you are too young for this movie")
+        continue
+    elif age > 130:
+        print("This is very old - it looks like a mistake")
+        continue
     #calculate ticket price
 
     #loop to ask for snacks
