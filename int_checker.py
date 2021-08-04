@@ -1,17 +1,18 @@
-def int_check(question):
-
-    error = "please enter whole number that is more than 12 and less than 130"
+error_age = ("Please enter a full number between 12 and 130")
+def int_check(question, low_num, high_num):
 
     valid = False
     while not valid:
 
-            #ask user for a number and check it is valid
         try:
             response = int(input(question))
 
-            if response <= 0:
-                print(error)
+        if low_num < response < high_num:
+           return response
+        else:
+            print (error_age)
 
-
+except ValueError
+    print(error_age)
 
 age = int_check("Age: ", 12, 130)
