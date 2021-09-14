@@ -9,9 +9,11 @@ def yes_no(question):
         response = input(question).lower()
 
         if response == "yes" or response == "y":
-            return "yes"
+            response = "yes"
+            return response
         elif response == "no" or response == "n":
-            return "no"
+            response = "no"
+            return response
         else:
             print(error)
 
@@ -20,3 +22,4 @@ def yes_no(question):
 
 for item in range (0,6):
     want_snacks = yes_no("Do you want snacks? ")
+    print("Answer {} ".format(want_snacks))
