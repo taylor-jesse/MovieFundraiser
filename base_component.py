@@ -28,39 +28,53 @@ def int_check(question):
 
 # ******* Main Routine *******
 name = ""
-count = 0
-max_tickets = 150
-while name != "xxx" and count < max_tickets:
-    print("You have {} seats "
-          "left".format(max_tickets - count))
-
+profit = 0
+ticket_count = 0
+ticket_sales = 0
+MAX_TICKETS = 5
+while name != "xxx" and ticket_count < MAX_TICKETS:
+    if ticket_count < MAX_TICKETS - 1:
+        print("You have {} seats left".format(MAX_TICKETS - ticket_count))
+    else:
+        print("you have one place left")
     # Get details
     name = not_blank("Name: ")
 
-#ask the user if they have used the program before or show
-
-#loop into net ticket details
-    #Get name
-#name = not_blank("Name: ")
-    #get age
+    # check that the age is valid
     age = int_check("Age: ")
-
-    #check that the age is valid
     if age < 12:
         print("Sorry you are too young for this movie")
         continue
     elif age > 130:
         print("This is very old - it looks like a mistake")
         continue
+    # calculate ticket price based on age
+    if age <16:
+        ticket_price = 7.5
+    elif age <65:
+        ticket_price = 10.5
+    else:
+        ticket_price = 6.5
 
-    count += 1
+
+#ask the user if they have used the program before or show
+
+#loop into net ticket details
+
+
+    ticket_count += 1
+    ticket_sales += ticket_price
     print ()
 
-    if count == max_tickets:
+ticket_profit = ticket_sales - (5 * ticket_count)
+print("Profit from Tickets: ${:.2f}".format(profit))
+if ticket_count == MAX_TICKETS:
         print("We have sold out of tickets!")
-    else:
+else:
         print("you have sold {} tickets.    \n")
-        "there are {} places still availble" .format(count, max_tickets - count)
+        "there are {} places still availble" .format(ticket_count, MAX_TICKETS-ticket_count)
+
+
     #calculate ticket price
 
     #loop to ask for snacks
